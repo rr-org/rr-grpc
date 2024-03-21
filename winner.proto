@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = "rr-grpc/winner";
+
+message CreateResponse {
+    string response = 1;
+}
+
+message CreateRequest {
+    string id = 1;
+}
+
+service Winner {
+    rpc Update(CreateRequest) returns (CreateResponse);
+}
